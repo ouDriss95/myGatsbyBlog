@@ -1,0 +1,9 @@
+- name: Driss Oudmine
+  bio: |
+    Front-end web developer. Specialized in Shopify theme development
+  avatar: ./avatars/moi.jpg
+  featured: true
+  social:
+    - url: https://github.com/ouDriss95
+    - url: https://www.instagram.com/oudriss95
+    - url: https://www.behance.net/unbreakabl16d0
