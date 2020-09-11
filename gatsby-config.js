@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Driss OUDMINE`,
-    name: `ouDriss`,
-    siteUrl: `https://novela.narative.co`,
+    name: `doudmine`,
+    siteUrl: `https://doudmine.com`,
     description: `Front-end web developer. Specialized in Shopify theme development`,
     hero: {
       heading: `Customize your Shopify store with ease!`,
@@ -49,7 +49,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Driss OUDMINE`,
-        short_name: `ouDriss`,
+        short_name: `doudmine`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
