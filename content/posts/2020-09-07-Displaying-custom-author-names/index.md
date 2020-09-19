@@ -60,3 +60,5 @@ Guru](https://apps.shopify.com/metafields-editor-2?surface_detail=metafields&sur
 **12.** After you finish creating the name of the author guest, click on **Save** button. 
 
 Once this is added, we can view the article and the name of guest author will appear as the article author. I hope this article guide is helpful for you!
+
+Hey, if you have any issues don't hesitate to DM me on [Instagram](https://www.instagram.com/oudriss95)
