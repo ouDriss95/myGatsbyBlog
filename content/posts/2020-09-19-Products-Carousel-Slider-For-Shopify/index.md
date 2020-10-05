@@ -94,6 +94,7 @@ Issues: http://github.com/kenwheeler/slick/issues
       align-items: center;
       padding: 10px 20px;
       box-sizing: border-box;
+      background-color: {{ section.settings.detail-box }};
    }
    .type {
       display: flex;
@@ -244,7 +245,7 @@ Issues: http://github.com/kenwheeler/slick/issues
             <div class="box">
                <!--img-box---------->
                <div class="slide-img">
-                  <img src="{{ product.featured_image.src | img_url: 'large' }}"
+                  <img style="object-fit: contain;" src="{{ product.featured_image.src | img_url: "large" }}"
                      alt="{{ product.featured_image.alt | escape }}">
                   <!--overlayer---------->
                   <div class="overlay">
@@ -309,6 +310,12 @@ Issues: http://github.com/kenwheeler/slick/issues
       "default": "#000"
       },
       {
+      "type": "color",
+      "id": "detail-box",
+      "label": "Detail Box",
+      "default": "#f3f3f3"
+      },
+      {
       "type": "text",
       "id": "btn-title",
       "default": "View More",
@@ -317,7 +324,7 @@ Issues: http://github.com/kenwheeler/slick/issues
       {
       "type": "color",
       "id": "color_bg--buyBtn",
-      "label": "Button Color",
+      "label": "Button Color on Hover",
       "default": "#CBD5CC"
       },
       {
