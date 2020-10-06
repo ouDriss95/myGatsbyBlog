@@ -15,11 +15,15 @@ module.exports = {
       },
       {
         name: `instagram`,
-        url: `https://www.instagram.com/oudriss95`,
+        url: `https://www.instagram.com/doudmine/`,
       },
       {
         name: `behance`,
         url: `https://www.behance.net/unbreakabl16d0`,
+      },
+      {
+        name: `youtube`,
+        url: `https://www.youtube.com/channel/UCYF73P2A2NdVr6c9aONH22w`,
       }
     ],
   },

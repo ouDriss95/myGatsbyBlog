@@ -251,4 +251,4 @@ Guru](https://apps.shopify.com/metafields-editor-2?surface_detail=metafields&sur
 
 **14.** After you finish creating all tabs you can click on **Save** button. 
 
-**Note:** You can only create Five tabs at maximum! if you need more than five tabs don't hesitate to DM me on [Instagram](https://www.instagram.com/oudriss95)
+**Note:** You can only create Five tabs at maximum! if you need more than five tabs don't hesitate to DM me on [Instagram](https://www.instagram.com/doudmine)

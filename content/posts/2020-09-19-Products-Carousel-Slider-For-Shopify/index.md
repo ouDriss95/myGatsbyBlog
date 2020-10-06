@@ -374,4 +374,4 @@ Issues: http://github.com/kenwheeler/slick/issues
 ```
 **15.** Congratulations! Now you have a Slider products in your shopify website 
 
-Hey, if you have any issues implementing the slider into your Minimal theme don't hesitate to DM me on [Instagram](https://www.instagram.com/oudriss95)
+Hey, if you have any issues implementing the slider into your Minimal theme don't hesitate to DM me on [Instagram](https://www.instagram.com/doudmine)
