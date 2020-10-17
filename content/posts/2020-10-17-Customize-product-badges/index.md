@@ -10,7 +10,7 @@ There are many ways to attach visitor’s attention to a product. One of the mos
 1. From your Shopify admin, go to **Online Store** > **Themes**.
 2. Find the Minimal theme, and then click **Actions** > **Duplicate**.
 3. Find the theme that called *Copy of Minimal* then click **Actions** > **Edit Code**.
-4. On the left bar, search for a folder called *Assets* then add the following good inside the "theme.scss.liquid" file
+4. On the left bar, search for a folder called *Assets* then add the following code inside the "theme.scss.liquid" file
 ```css
 .d-flex-important {
   display: flex !important;
@@ -20,7 +20,7 @@ There are many ways to attach visitor’s attention to a product. One of the mos
   top: 30px;
   width: 100%;
 }
-.badge {
+.label {
   color: #FFFFFF;
   font-size: 12px;
   font-weight: 500;
@@ -33,8 +33,6 @@ There are many ways to attach visitor’s attention to a product. One of the mos
 
 .badge--sold-out {
   background-color: #1b1b1c;
-  top: 50px;
-  position: absolute;
 }
 
 .badge--sale {
@@ -72,26 +70,26 @@ There are many ways to attach visitor’s attention to a product. One of the mos
       {%- if label_present -%}
          {% if on_sale %}
          {% if settings.show_sale_badge %}  
-            <span class="badge badge--sale">
+            <span class="label badge--sale">
                <span class="badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}">{{ 'products.product.sale' | t }}</span>
             </span>
          {% endif %}
          {% if settings.show_percentage_badge %}  
-            <span class="badge badge--sale">
+            <span class="label badge--sale">
                <span class="badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}">-{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | replace: ',', '.' | times: 100 | remove: '.0'}}%</span>
             </span>
          {% endif %}
          {% endif %}
 
          {% if sold_out and settings.show_sold_out_badge %}
-         <span class="badge badge--sold-out">
+         <span class="label badge--sold-out">
             <span class="badge__text{% if sold_out_text.size > 9 %} badge__text--small{% endif %}">{{ 'products.product.sold_out' | t }}</span>
          </span>
          {% endif %}
    
          {%- if show_label_hot -%}
          {%- if product.metafields.labels.hot == 'true' -%}
-            <span class="badge badge--hot">
+            <span class="label badge--hot">
                <span class="badge__text{% if sold_out_text.size > 9 %} badge__text--small{% endif %}">HOT</span>
             </span>
          {%- endif -%}
@@ -99,7 +97,7 @@ There are many ways to attach visitor’s attention to a product. One of the mos
 
          {%- if show_label_new -%}
          {%- if product.metafields.labels.new == 'true' -%}
-            <span class="badge badge--new">
+            <span class="label badge--new">
                <span class="badge__text{% if sold_out_text.size > 9 %} badge__text--small{% endif %}">NEW</span>
             </span>
          {%- endif -%} 
@@ -222,41 +220,41 @@ There are many ways to attach visitor’s attention to a product. One of the mos
 ```
 **8.** On the left bar, search for a folder called *Confi* then click on the “settings_schema.json” file.
 
-**9.** Copy and paste the following code inside the “settings_schema.json” file
+**9.** Copy and paste the following code inside the “settings_schema.json” file. Don't forget "Comma" at the end when you paste the code!
 ```js
 {
-   "name": "Products Badges",
-   "settings": [
-      {
-         "type": "header",
-         "content": "Product Badges"
-      },
-      {
-         "type": "checkbox",
-         "id": "show_sale_badge",
-         "label": "Show 'Sale' badge"
-      },
-      {
-         "type": "checkbox",
-         "id": "show_percentage_badge",
-         "label": "Show Percentage badge"
-      },
-      {
-         "type": "checkbox",
-         "id": "show_sold_out_badge",
-         "label": "Show 'Sold out' badge"
-      },
-      {
-         "type": "checkbox",
-         "id": "product_collection_show_label_hot",
-         "label": "Show 'HOT' badge"
-      },
-      {
-         "type": "checkbox",
-         "id": "product_collection_show_label_new",
-         "label": "Show 'NEW' badge"
-      }
-   ]
+  "name": "Products Badges",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Badges"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sale_badge",
+      "label": "Show 'Sale' badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_percentage_badge",
+      "label": "Show Percentage badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sold_out_badge",
+      "label": "Show 'Sold out' badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_collection_show_label_hot",
+      "label": "Show 'HOT' badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_collection_show_label_new",
+      "label": "Show 'NEW' badge"
+    }
+  ]
 }
 ```
 **10.** Now, we are going to need custom fields in order to make "HOT" & "NEW" badges! so in this case we will need to install an app called [Metafields
@@ -266,10 +264,10 @@ Guru](https://apps.shopify.com/metafields-editor-2?surface_detail=metafields&sur
 
 **12.** After you choose the product, click on *Create Metafield* button.
 
-**13.** Now you can see a Form appeared after you click on *Create Metafield*, inside the input with name of "Key" start writing **new** if you want NEW badge and **hot** if you want HOT badge and inside the input with the name of "Namespace" start writing **label**. Next, write **true** inside the last input which is the tallest one!
+**13.** Now you can see a Form appeared after you click on *Create Metafield*, inside the input with name of "Key" start writing **new** if you want NEW badge and **hot** if you want HOT badge and inside the input with the name of "Namespace" start writing **labels**. Next, write **true** inside the last input which is the tallest one!
 
 **14.** After you finish creating the metafields of the product, click on **Save** button. 
 
-Et Voila, now you're good to go! I hope this artile is helpful for you, see you in another tutorial :)
+Now you're good to go! I hope this artile is helpful for you, see you in another tutorial :)
 
 Hey, if you have any issues don't hesitate to DM me on [Instagram](https://www.instagram.com/doudmine)
