@@ -156,7 +156,7 @@ In this tutorial article we will be adding a parallax section with fixed scrolli
                      <span class="old_price">{{ featured_product.variants.first.compare_at_price | money }}</span>
                      {%- endif -%}
                   </div>
-                  <a class="btn" href="{{ featured_product.url }}" role="button">Shop Now</a>
+                  <a class="btn" href="{{ featured_product.url }}" role="button">{{ section.settings.txt_button }}</a>
                </div>
             </div>
          </div>
@@ -177,6 +177,12 @@ In this tutorial article we will be adding a parallax section with fixed scrolli
       "type": "image_picker",
       "id": "img_product",
       "label": "Section image"
+    },
+    {
+      "type": "text",
+      "id": "txt_button",
+      "label": "Button text",
+      "default": "View more"
     },
     {
       "type": "product",
