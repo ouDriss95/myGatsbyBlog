@@ -5,7 +5,7 @@ date: 2020-10-21
 hero: ./images/hero.jpg
 excerpt: In this article, you will learn how to add a section with a parallax effect to boost the visual experience of your home page.
 ---
-In this tutorial article we will be adding a parallax section with fixed scrolling using HTML and CSS and LIQUID. You will see that when you scroll the image inside the section will stay in place, so let me show how to add it to your Shopify store.
+In this tutorial article we will be adding a parallax section with fixed scrolling using HTML and CSS and LIQUID. You will see that when you scroll the image inside the section will stay in place, so let me show you how to add it to your Shopify store.
 
 1. From your Shopify admin, go to **Online Store** > **Themes**.
 2. Find the Minimal theme, and then click **Actions** > **Duplicate**.
@@ -142,7 +142,7 @@ In this tutorial article we will be adding a parallax section with fixed scrolli
    https://www.doudmine.com/
 {% endcomment %}
 {%- assign featured_product = all_products[section.settings.featured_product_handle] -%}
-<div class="featured lazy" style="background: url({{ section.settings.img_product | img_url: 'master' }}) 50% 70%;">
+<div class="featured lazy" style="background: url({% if section.settings.img_product %}{{ section.settings.img_product | img_url: 'master' }}{% else %}https://via.placeholder.com/1200x800{% endif %}) 50% 70%;">
    <div class="opacity-mask d-flex align-items-center">
       <div class="container margin_60">
          <div class="row justify-content-center justify-content-md-start">
@@ -152,7 +152,6 @@ In this tutorial article we will be adding a parallax section with fixed scrolli
                <div class="feat_text_block">
                   <div class="price_box">
                      <span class="new_price">{{ featured_product.variants.first.price | money }}</span>
-
                      {%- if featured_product.variants.first.compare_at_price > featured_product.variants.first.price -%}
                      <span class="old_price">{{ featured_product.variants.first.compare_at_price | money }}</span>
                      {%- endif -%}
@@ -165,35 +164,35 @@ In this tutorial article we will be adding a parallax section with fixed scrolli
    </div>
 </div>
 <!-- /featured -->
- 
+
 {% schema %}
 {
-   "name": "Featured Product Parallax",
-   "settings": [
-      {
-         "type": "header",
-         "content": "Parallax featured product"
-      },
-      {
-         "type": "image_picker",
-         "id": "img_product",
-         "label": "Section image"
-      },
-      {
-			"type": "product",
-			"id": "featured_product_handle",
-			"label": "Select product"
-		}
-   ],
-   "presets": [
-      {
-         "name": "Featured Product Parallax",
-         "category": "Products"
-      }
-   ]
+  "name": "Featured Product Parallax",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Parallax featured product"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_product",
+      "label": "Section image"
+    },
+    {
+      "type": "product",
+      "id": "featured_product_handle",
+      "label": "Select product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Product Parallax",
+      "category": "Products"
+    }
+  ]
 }
 {% endschema %}
 ```
-Now, your Section is ready to showcase your featured product. I hope this article is helpful for you!
+That's it now, your Section is ready to showcase your featured product. I hope this article is helpful for you!
 
 If you have any issues don't hesitate to DM me on [Instagram](https://www.instagram.com/doudmine)
