@@ -399,4 +399,4 @@ Issues: http://github.com/kenwheeler/slick/issues
 ```
 **15.** Congratulations! Now you have a Slider products in your Debut theme 
 
-Hey, if you have any issues implementing the slider into your Debut theme you can Hire me so I can implement the slider for you. DM me on [Instagram](https://www.instagram.com/doudmine)
+Hey, if you have any issues implementing the slider into your Shopify Store you can Hire me so I can implement the slider for you. DM me on [Instagram](https://www.instagram.com/doudmine)
