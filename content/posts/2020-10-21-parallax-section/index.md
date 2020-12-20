@@ -25,6 +25,12 @@ In this tutorial article we will be adding a parallax section with fixed scrolli
   font-size: 1.125rem;
   overflow: hidden;
 }
+/* Turn off parallax scrolling for all tablets and phones. */
+@media only screen and (max-width: 768px) {
+  div.featured {
+    background-attachment: scroll !important;
+  }
+}
 .featured h3 {
   color: #fff;
   font-weight: 900;
