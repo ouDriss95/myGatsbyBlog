@@ -207,4 +207,4 @@ In this tutorial article we will be adding a parallax section with fixed scrolli
 ```
 That's it now, your Section is ready to showcase your featured product. I hope this article is helpful for you!
 
-Hey, if you have any issues implementing the Parallax section into your Shopify Store you can Hire me so I can implement the it for you. DM me on [Instagram](https://www.instagram.com/doudmine)
+Hey, if you have any issues implementing the Parallax section into your Shopify Store. DM me on [Instagram](https://www.instagram.com/doudmine) so I can help

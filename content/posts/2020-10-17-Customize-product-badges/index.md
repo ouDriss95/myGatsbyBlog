@@ -270,4 +270,4 @@ Guru](https://apps.shopify.com/metafields-editor-2?surface_detail=metafields&sur
 
 Now you're good to go! I hope this artile is helpful for you, see you in another tutorial :)
 
-Hey, if you have any issues implementing the Badges into your Shopify Store you can Hire me so I can implement them for you. DM me on [Instagram](https://www.instagram.com/doudmine)
+Hey, if you have any issues implementing the Badges into your Shopify Store. DM me on [Instagram](https://www.instagram.com/doudmine) so I can help

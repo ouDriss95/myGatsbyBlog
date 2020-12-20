@@ -374,4 +374,4 @@ Issues: http://github.com/kenwheeler/slick/issues
 ```
 **15.** Congratulations! Now you have a Slider products in your shopify website 
 
-Hey, if you have any issues implementing the slider into your Shopify Store you can Hire me so I can implement the slider for you. DM me on [Instagram](https://www.instagram.com/doudmine)
+Hey, if you have any issues implementing the Product Carousel into your Shopify Store. DM me on [Instagram](https://www.instagram.com/doudmine) so I can help
