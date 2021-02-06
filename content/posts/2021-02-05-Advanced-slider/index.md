@@ -492,7 +492,7 @@ Product Sliders allows showing all suggested products friendly that match to cus
       for ( var i = 0, len = elms.length; i < len; i++ ) {
         new Splide( elms[ i ], {
         perPage: 2,
-         perMove: 4,
+         perMove: 3,
          rewind: true,
          fixedWidth: 330,
          arrows: {{ section.settings.show_arrows }},
