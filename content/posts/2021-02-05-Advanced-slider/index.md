@@ -19,6 +19,7 @@ Product Sliders allows showing all suggested products friendly that match to cus
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
 ```
 **6.** Next, On the left bar, search for a folder called *Sections* then create a new file called 'advanced-slider'
+
 **7.** After you created the file, delete what's inside it then paste the following code inside it
 ```js
 
