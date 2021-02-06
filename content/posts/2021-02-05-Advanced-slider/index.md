@@ -14,7 +14,7 @@ Product Sliders allows showing all suggested products friendly that match to cus
 ```js
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/themes/splide-skyblue.min.css">
 ```
-**5.** On the same file 'theme.liquid' Copy and paste the following code inside it on the line 76 then Save.
+**5.** On the same file 'theme.liquid' Copy and paste the following code inside it on the line 75 then Save.
 ```js
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
 ```
