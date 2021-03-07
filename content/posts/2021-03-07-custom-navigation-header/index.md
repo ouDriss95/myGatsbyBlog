@@ -1,6 +1,7 @@
 ---
 title: Custom Header With Hide on Scroll Down & Show on Scroll Up in Shopify - No app
 author: Driss Oudmine
+secret: true
 date: 2021-03-07
 hero: ./images/hero.jpg
 excerpt: In this tutorial you will learn how to re-design your header to a custom one that looks professional! 
