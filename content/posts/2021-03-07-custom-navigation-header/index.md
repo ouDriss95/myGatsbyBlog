@@ -1,7 +1,6 @@
 ---
 title: Custom Header With Hide on Scroll Down & Show on Scroll Up in Shopify - No app
 author: Driss Oudmine
-secret: true
 date: 2021-03-07
 hero: ./images/hero.jpg
 excerpt: In this tutorial you will learn how to re-design your header to a custom one that looks professional! 
@@ -24,6 +23,7 @@ Also I encourage you to watch the whole video on YouTube, so you can use this cu
       <style>
       .announcement-bar {
          background-color: {{ settings.color_bg }};
+         display: block;
       }
       .announcement-bar--link:hover {
          {% assign brightness = settings.color_bg | color_brightness %}
@@ -55,7 +55,58 @@ Also I encourage you to watch the whole video on YouTube, so you can use this cu
    {% endif %}
 {% endif %}
 ```
-**7.** Finally, copy & paste the following code inside the file called "header" in the Sections folder after you delete what's in it
+
+**7.** Next, search for a folder called *config* on the left bar, then click on a file called 'settings_schema.json' 
+
+**8.** Inside the file 'settings_schema.json' add the following code at the bottom (Before the closing Bracket)
+```js
+,{
+  "name": "Advanced settings",
+  "settings" : [
+    {
+      "type": "header",
+      "content": "Announcement Bar"  
+    },
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "home_page_only",
+      "label": "Home page only",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "announcement_link",
+      "label": "Link"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Bar color",
+      "default": "#000"
+    }
+  ]
+}
+```
+
+**9.** Finally, copy & paste the following code inside the file called "header" in the Sections folder after you delete what's in it
 ```js
 <style>
   .myheader-section {
@@ -1315,67 +1366,10 @@ function hasScrolled() {
       "zh-CN": "菜单",
       "zh-TW": "選單"
       }    
-    },
-    {
-      "type": "header",
-      "content": {
-        "da": "Meddelelseslinje",
-        "de": "Ankündigungsbereich",
-        "en": "Announcement bar",
-        "es": "Barra de anuncios",
-        "fi": "Ilmoituspalkki",
-        "fr": "Barre d'annonces",
-        "hi": "घोषणा बार",
-        "it": "Barra degli annunci",
-        "ja": "告知バー",
-        "ko": "공지 표시줄",
-        "nb": "Kunngjøringslinje",
-        "nl": "Aankondigingsbalk",
-        "pt-BR": "Barra de avisos",
-        "pt-PT": "Barra de comunicado",
-        "sv": "Meddelandefält",
-        "th": "แถบประกาศ",
-        "zh-CN": "公告栏",
-        "zh-TW": "公告列"
-      }
-    },
-    {
-      "type": "checkbox",
-      "id": "show_announcement",
-      "label": "Show announcement",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "home_page_only",
-      "label": "Home page only",
-      "default": false
-    },
-    {
-      "type": "text",
-      "id": "announcement_text",
-      "label": "Text",
-      "default": "Announce something here"
-    },
-    {
-      "type": "url",
-      "id": "announcement_link",
-      "label": "Link"
-    },
-    {
-      "type": "color",
-      "id": "color_text",
-      "label": "Text color",
-      "default": "#fff"
-    },
-    {
-      "type": "color",
-      "id": "color_bg",
-      "label": "Bar color",
-      "default": "#000"
     }
   ]
 }
 {% endschema %}
 ```
+
 That's it! I really hope you find this tutorial useful.
